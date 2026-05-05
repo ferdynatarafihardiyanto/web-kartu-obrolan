@@ -4,7 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Dices, RefreshCcw, Hand, SkipForward, X, Play, LogOut, Settings, LayoutDashboard, Plus, Trash2, Edit } from 'lucide-react';
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:3000/api';
+const API_BASE = window.location.hostname === 'localhost' 
+  ? 'http://localhost:3000/api' 
+  : '/api';
 
 // --- Color Helper ---
 const WHEEL_COLORS = {
